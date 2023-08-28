@@ -1,0 +1,18 @@
+#CardSc{
+    height: 100px;
+    width: 100%;
+    border-radius: 10px;
+}
+.cardScBody{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+#cardScTitle{
+    font-weight:600;
+    color: var(--blue);
+    margin: 0;
+    text-align: center;
+    display: grid;
+    place-items: center;
+}

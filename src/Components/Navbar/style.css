@@ -1,0 +1,44 @@
+.gapNav {
+  display: flex;
+  gap: 20px;
+}
+
+#loginBtn {
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  background-color: var(--blue);
+  border-radius: 10px;
+  color: white;
+}
+
+#loginBtn:hover {
+  background-color: var(--blueHover);
+}
+
+/* Screen 992px */
+@media screen and (max-width: 992px) {
+  .navbar{
+    height: unset;
+  }
+  #logoDesk {
+    display: none;
+  }
+  #logoMobile {
+    height: 60px;
+    display: flex;
+    align-items: center;
+  }
+
+  .gapNav {
+    text-align: center;
+    gap: unset;
+  }
+
+  #loginBtn {
+    background-color: unset;
+    color: var(--bs-nav-link-color);
+    padding: 0.5rem 0;
+    display: unset !important;
+  }
+}

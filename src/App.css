@@ -1,0 +1,62 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  --blue: #00AEEF;
+  --blueHover: #025ea0;
+  --white: #fff;
+  --black: #252525;
+  --blackDesc:#585858;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #b7b7b7;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--blue);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  border-radius: 20px;
+  background: var(--blueHover);
+}
+
+
+a{
+  text-decoration: none !important;
+}
+
+.yellow{
+  margin-right: 12px;
+  color: rgb(0, 94, 255);
+}
+
+#HeroSection{
+  overflow-x: hidden;
+ margin-top: 100px;
+}
+
+p{
+  color: var(--blackDesc);
+}
+.ScTitle{
+  & h2{
+      font-weight: 700;
+      color: var(--black);
+  }
+}
+
+
