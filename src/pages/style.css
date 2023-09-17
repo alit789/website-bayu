@@ -59,15 +59,21 @@
 
   & .ingatDanLupa {
     display: flex;
+    align-items: center;
     margin-top: 10px;
     justify-content: space-between;
+
+    & .ingat{
+      display: flex;
+      align-items: center;
+    }
     & input {
       width: 20px;
       height: 20px;
     }
     & span {
-      font-size: 20px;
-      margin-left: 10px;
+      font-size: 16px;
+      margin-left: 6px;
     }
   }
 
