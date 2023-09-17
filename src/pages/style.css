@@ -1,0 +1,169 @@
+* {
+  /* outline: 1px solid black; */
+}
+/* Style Home */
+
+#HeroSection {
+  overflow-x: hidden;
+  margin-top: 100px;
+}
+
+.ScTitle {
+  & h2 {
+    font-weight: 700;
+  }
+}
+
+/* End Style Home */
+
+/* Login Style */
+
+#Login {
+  & .loginWrap {
+    height: 100vh;
+    display: grid;
+    align-items: center;
+  }
+
+  & .loginContent {
+    border: 1px solid black;
+    border-radius: 20px;
+    display: flex;
+    padding: 50px 40px;
+  }
+  & .leftContent,
+  .rightContent {
+    width: 100%;
+  }
+  .rightContent {
+    text-align: center;
+  }
+  .leftContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  & form {
+    & input {
+      width: 100%;
+      outline: none;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid black;
+      border-radius: 20px;
+    }
+  }
+
+  & .ingatDanLupa {
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+    & input {
+      width: 20px;
+      height: 20px;
+    }
+    & span {
+      font-size: 20px;
+      margin-left: 10px;
+    }
+  }
+
+  .btnAction {
+    & #Masuk {
+      background-color: var(--blue);
+      color: white;
+      transition: all ease 0.5s;
+    }
+
+    & #Masuk:hover {
+      background-color: var(--blueHover);
+    }
+
+    & button {
+      background-color: transparent;
+      border: 1px solid var(--blue);
+      padding: 10px;
+      border-radius: 20px;
+      width: 100%;
+      margin: 5px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .rightContent {
+    display: none;
+  }
+}
+
+/* End Login Style */
+
+/* Daftar Page */
+
+#Daftar {
+  & .daftarWrap {
+    display: grid;
+    align-items: center;
+    height: 100vh;
+  }
+
+  & .daftarContent {
+    border-radius: 20px;
+    border: 1px solid black;
+    padding: 50px 40px;
+  }
+
+  & form {
+    & .daftarBtn{
+      width: 100%;
+      margin-top: 10px;
+      text-align: center;
+
+      & button{
+        border: none;
+        color: white;
+        background-color: var(--blue);
+        width: 50%;
+        padding: 10px;
+        border-radius: 20px;
+      }
+    }
+    & .contentForm {
+      display: flex;
+      gap: 20px;
+    }
+    & .left,
+    .right {
+      width: 100%;
+    }
+    & Select,
+    Input {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      outline: none;
+      border: 1px solid black;
+      border-radius: 14px;
+    }
+  }
+}
+@media screen and (max-width:992px) {
+
+  .daftarContent{
+    border: none !important;
+  }
+
+  .daftarWrap{
+    height: auto !important;
+  }
+
+  .daftarBtn button{
+    width: 100% !important;
+  }
+  .contentForm{
+    display: unset !important;
+  }
+}
+
+/* End Daftar Page */

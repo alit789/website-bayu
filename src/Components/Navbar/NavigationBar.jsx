@@ -30,10 +30,10 @@ const NavigationBar = () => {
             <Nav.Link href="/">Konsultan</Nav.Link>
           </Nav>
           <Nav className="ms-auto gapNav">
-            <Nav.Link id="daftar" href="/">
+            <Nav.Link id="daftar" href="/daftar">
               Daftar
             </Nav.Link>
-            <Nav.Link id="loginBtn" href="/">
+            <Nav.Link id="loginBtn" href="/login">
               Masuk
             </Nav.Link>
           </Nav>
