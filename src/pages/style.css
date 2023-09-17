@@ -19,6 +19,17 @@
 /* Login Style */
 
 #Login {
+  & .btnShow {
+    position: absolute;
+    top: 54px;
+    right: 20px;
+    cursor: pointer;
+  }
+
+  & .showPassword {
+    position: relative;
+  }
+
   & .loginWrap {
     height: 100vh;
     display: grid;
@@ -63,7 +74,7 @@
     margin-top: 10px;
     justify-content: space-between;
 
-    & .ingat{
+    & .ingat {
       display: flex;
       align-items: center;
     }
@@ -110,6 +121,17 @@
 /* Daftar Page */
 
 #Daftar {
+  .showPasswordDaftar {
+    position: relative;
+
+    & img {
+      cursor: pointer;
+      position: absolute;
+      top: 46px;
+      right: 20px;
+    }
+  }
+
   & .daftarWrap {
     display: grid;
     align-items: center;

@@ -1,7 +1,19 @@
 import './style.css'
+import { useState } from 'react';
 import Gambar from "../IMG/Electrician-amico 1.png";
+import passwordIconShow from '../IMG/pass.svg';
+import hiddenPassIcon from '../IMG/hide.svg';
+
 
 const Login = () => {
+  const [passwordShown, setPasswordShown] = useState(false);
+  const [passIcon, setPassIcon] = useState(passwordIconShow);
+
+  const togglePassword = () => {
+
+    passIcon ===  passwordIconShow ? setPassIcon(hiddenPassIcon) : setPassIcon(passwordIconShow)
+    setPasswordShown(!passwordShown);
+  };
   return (
     <section id='Login'>
       <div className="container">
@@ -14,8 +26,11 @@ const Login = () => {
                 <h5>Username*</h5>
                 <input type="text" name='username' placeholder='Masukan Username' />
                 <br />
-                <h5>Kata Sandi*</h5>
-                <input type="password" name='password' placeholder='Masukan Kata Sandi' />
+                <div className="showPassword">
+                  <h5>Kata Sandi*</h5>
+                  <input type={passwordShown ? 'text' : 'password'} name='password' placeholder='Masukan Kata Sandi'  />
+                  <img src={passIcon} width={'5%'} className='btnShow' onClick={togglePassword} />
+                </div>
               </form>
               <div className="ingatDanLupa">
                 <div className="ingat">

@@ -1,6 +1,18 @@
 import './style.css'
+import { useState } from 'react';
+import passwordIconShow from '../IMG/pass.svg';
+import hiddenPassIcon from '../IMG/hide.svg';
 
 const Daftar = () => {
+  const [passwordShown, setPasswordShown] = useState(false);
+  const [passIcon, setPassIcon] = useState(passwordIconShow);
+
+  const togglePassword = () => {
+    // When the handler is invoked
+    // inverse the boolean state of passwordShown
+    passIcon === passwordIconShow ? setPassIcon(hiddenPassIcon) : setPassIcon(passwordIconShow);
+    setPasswordShown(!passwordShown);
+  };
   return (
     <section id='Daftar'>
       <div className="container">
@@ -14,14 +26,14 @@ const Daftar = () => {
                 <div className="left">
                   {/* form perusahaan */}
                   <h5>Perusahaan</h5>
-                  <select name="Perusahaan" id="">
+                  <select name="Perusahaan" id="perusahaan">
                     <option value="">Pilih Perusahaan</option>
                     <option value="">Alit Group</option>
                   </select>
                   <br />
                   {/* form bagian */}
                   <h5>Bagian</h5>
-                  <select name="Bagian" id="">
+                  <select name="Bagian" id="bagian">
                     <option value="">Pilih Bagian</option>
                     <option value="">Alit Group</option>
                   </select>
@@ -49,11 +61,17 @@ const Daftar = () => {
                   <input type="text" name='EmailPLN' placeholder='Masukan Alamat Email PLN' />
                   <br />
                   {/* form Kata Sandi */}
-                  <h5>Kata Sandi</h5>
-                  <input type="password" name='KataSandi' placeholder='Masukan Kata Sandi' />
+                  <div className="showPasswordDaftar">
+                    <h5>Kata Sandi*</h5>
+                    <input type={passwordShown ? 'text' : 'password'} name='password' placeholder='Masukan Kata Sandi' />
+                    <img src={passwordIconShow} width={'5%'} className='btnShow' onClick={togglePassword} />
+                  </div>
                   {/* form konfirmasi Kata Sandi */}
-                  <h5>Konfirmasi Kata Sandi</h5>
-                  <input type="password" name='konfirmasiKataSandi' placeholder='Masukan Kata Sandi' />
+                  <div className="showPasswordDaftar">
+                    <h5>Kata Sandi*</h5>
+                    <input type={passwordShown ? 'text' : 'password'} name='confirPassword' placeholder='Masukan Kata Sandi' />
+                    <img src={passwordIconShow} width={'5%'} className='btnShow' onClick={togglePassword} />
+                  </div>
                   {/* form Gender */}
                   <h5>Perusahaan</h5>
                   <select name="Kelamin" id="kelamin">
